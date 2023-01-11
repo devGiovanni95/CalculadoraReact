@@ -1,0 +1,22 @@
+/* importando a fonte */
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('./fonts/NotoSans-Thin.ttf');
+}
+
+/* Aplicando a fonte a tudo */
+*{
+  font-family: 'RobotoMono', monospace;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;/*horizontal*/
+  align-items: center;/*vertical*/
+  text-align: center;
+
+  color: #FFF;
+  background: linear-gradient(to right, rgb(83,105,118),rgb(41,46,73));
+}
+

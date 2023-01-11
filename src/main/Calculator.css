@@ -1,6 +1,11 @@
 .calculator{
     height: 320px;
     width:  235px;
-    /* border-radius */
-    background-color: brown;
+    border-radius: 5px;
+    overflow: hidden;
+
+    /*Layout*/
+    display: grid;
+    grid-template-columns: repeat(4, 25%); /* 4 colunas cada uma com 25% do tamanho da tela*/
+    grid-template-rows: repeat(5, 48px)
 }

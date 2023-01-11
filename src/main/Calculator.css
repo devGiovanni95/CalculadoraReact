@@ -7,5 +7,5 @@
     /*Layout*/
     display: grid;
     grid-template-columns: repeat(4, 25%); /* 4 colunas cada uma com 25% do tamanho da tela*/
-    grid-template-rows: repeat(5, 48px)
+    grid-template-rows: 1fr repeat(5, 48px)
 }

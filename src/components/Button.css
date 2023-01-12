@@ -13,3 +13,30 @@
     border-bottom: var(--border-button);
     outline: none;/*Nao aprecer sombra quando clicado*/
 }
+
+/*Botçao clicado*/
+.button:active{
+    background-color: #ccc;
+}
+
+/*Botao com 2 espaços*/
+.button.double{
+    grid-column: span 2;
+}
+
+/*Botao com 3 espaços*/
+.button.triple{
+    grid-column: span 3;
+}
+
+
+/*Botões de operadores*/
+.button.operation{
+    background-color: #fa8231;
+    color: #FFF;
+}
+
+/*Botçao clicado*/
+.button.operation{
+    background-color: #fa8231cc;
+}

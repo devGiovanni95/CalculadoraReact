@@ -34,7 +34,45 @@ export default class Calculator extends Component{
     }
 
     setOperation(operation){
-        console.log(operation)
+        // console.log(operation)
+        /*Alterando as configurações para quando clicar num outro numero 
+        ele entrar na nova posição de array e fazer as verificações necessarias */
+        if(this.state.current === 0){
+            this.setState({
+                operation,          //selecionando a operação
+                current: 1,         //alterando a posição do array para 1
+                clearDisplay: true  //alterando a função para limpar quando iniciar o estado 
+            })
+        }else{
+            //Verificando se foi digitado igual
+            const equals = operation === '='
+            //
+            const currentOperation = this.state.operation
+
+            const values = [...this.state.values]
+
+            /**Refatorar mais tarde usando switch case */
+            try{
+                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
+                //tratando o erro do NaN
+                if (isNaN(values[0]) || !isFinite(values[0])) {
+                    this.clearMemory()
+                return
+                }
+            }catch{
+                values[0] = this.state.values[0]
+            }
+
+            values[1] = 0
+
+            this.setState({
+                displayValue: values[0],
+                operation : equals ? null : operation,          //selecionando a operação
+                current: equals ? 0 : 1,         //alterando a posição do array para 1
+                clearDisplay: !equals,  //alterando a função para limpar quando iniciar o estado 
+                values
+            })
+        }
     }
 
     addDigit(n){

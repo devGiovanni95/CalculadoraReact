@@ -1,10 +1,8 @@
-/* importando a fonte */
 @font-face {
   font-family: 'RobotoMono';
   src: url('./fonts/NotoSans-Thin.ttf');
 }
 
-/* Aplicando a fonte a tudo */
 *{
   font-family: 'RobotoMono', monospace;
 }
@@ -12,8 +10,8 @@
 body{
   display: flex;
   height: 100vh;
-  justify-content: center;/*horizontal*/
-  align-items: center;/*vertical*/
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
   color: #FFF;
